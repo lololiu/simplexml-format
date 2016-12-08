@@ -1,0 +1,34 @@
+<idea-plugin version="2">
+  <id>Royll.SimpleXmlFormat.ID</id>
+  <name>simplexml-format</name>
+  <version>1.01</version>
+  <vendor email="liulou.zh@gmail.com" url="royliu.xyz">Roy</vendor>
+
+  <description><![CDATA[
+      A plugin you can generate javabean from xml
+    ]]></description>
+
+  <change-notes><![CDATA[
+    fix bug
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="simple_xml_format" class="com.royll.xmlformat.action.SimpleXmlFormatAction" text="xmlformat"
+            description="simplexml format bean">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt 1"/>
+    </action>
+  </actions>
+
+</idea-plugin>
